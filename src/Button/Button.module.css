@@ -1,0 +1,16 @@
+.Button {
+  opacity: 0.8;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  padding: 8px 16px;
+  appearance: none;
+  font-weight: 500;
+  border: #342ead;
+  border-radius: 4px;
+  background: #342ead;
+}
+
+.Button:hover {
+  opacity: 1;
+}
