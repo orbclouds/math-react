@@ -1,6 +1,8 @@
 import React from 'react';
 import type { FC } from 'react';
 
+import Orb from '@app/Orb';
+
 import Answer from './Answer';
 import Question from './Question';
 
@@ -13,16 +15,19 @@ const App: FC = () => {
     generateQuestion,
   } = useHooks();
   return (
-    <main className={styles.Container}>
-      <Question
-        question={question}
-        skip={generateQuestion}
-      />
-      <Answer
-        answer={eval(question)}
-        next={generateQuestion}
-      />
-    </main>
+    <>
+      <Orb />
+      <main className={styles.Container}>
+        <Question
+          question={question}
+          skip={generateQuestion}
+        />
+        <Answer
+          answer={eval(question)}
+          next={generateQuestion}
+        />
+      </main>
+    </>
   );
 };
 
